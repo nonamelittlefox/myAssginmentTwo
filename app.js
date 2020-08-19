@@ -6,8 +6,8 @@ const logger = require('morgan');
 const epxhbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
-
-var MongoClient = require('mongodb').MongoClient;
+const mongodb = require('mongodb')
+var MongoClient = mongodb.MongoClient;
 var url = "mongodb+srv://aLazyFox:112113viet@assignmenttwo.hq8ya.mongodb.net/test";
 
 // get routers from routes
@@ -69,7 +69,7 @@ app.post('/doInsertProduct', async(req, res) => {
 // Delete Product
 app.get('/delete', async(req, res) => {
     let id = req.query.id;
-    var ObjectID = require('mongoDB').ObjectID;
+    var ObjectID = mongodb.ObjectID;
     let client = await MongoClient.connect(url);
     console.log(id);
     let dbo = client.db('ProductDB');
@@ -93,7 +93,7 @@ app.get('/doSearch', async(req, res) => {
 // Update Product 
 app.get('/update', async(req, res) => {
     let id = req.query.id;
-    var ObjectID = require('mongoDB').ObjectID;
+    var ObjectID = mongodb.ObjectID;
     let client = await MongoClient.connect(url);
     let dbo = client.db('ProductDB');
     let product = await dbo.collection("Products").find({ _id: ObjectID(id.toString()) }).toArray();
@@ -109,7 +109,7 @@ app.post('/doUpdateProduct', async(req, res) => {
     let inputImage = req.body.image;
     let inputGenre = req.body.txtGenre;
     let inputColor = req.body.txtColor;
-    var ObjectID = require('mongodb').ObjectID;
+    var ObjectID = mongodb.ObjectID;
     let client = await MongoClient.connect(url);
     let dbo = client.db("ProductDB");
     let result = await dbo.collection('Products').updateOne({ "_id": ObjectID(id) }, {
@@ -129,7 +129,7 @@ app.post('/doUpdateProduct', async(req, res) => {
 app.post('/postLogin', async(req, res) => {
     let email = req.query.email;
     let password = req.query.password;
-    var ObjectID = require('mongoDB').ObjectID;
+    var ObjectID = mongodb.ObjectID;
     let client = await MongoClient.connect(url);
     let dbo = client.db('ProductDB');
     let account = await dbo.collection("ManagerAccount").find({ email: email, password: password }).toArray();
