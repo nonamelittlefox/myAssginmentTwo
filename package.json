@@ -1,33 +1,34 @@
 {
-  "name": "myassigment",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "config": "^3.3.1",
-    "consolidate": "^0.15.1",
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-    "handlebars": "^4.7.6",
-    "hbs": "^4.1.1",
-    "mongoose": "^5.10.0",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.4"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nonamelittlefox/myAssginmentTwo.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nonamelittlefox/myAssginmentTwo/issues"
-  },
-  "homepage": "https://github.com/nonamelittlefox/myAssginmentTwo#readme"
+    "name": "myassigment",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "config": "^3.3.1",
+        "consolidate": "^0.15.1",
+        "cookie-parser": "^1.4.5",
+        "express": "^4.17.1",
+        "express-handlebars": "^5.1.0",
+        "handlebars": "^4.7.6",
+        "hbs": "^4.1.1",
+        "mongoose": "^5.10.0",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.4"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nonamelittlefox/myAssginmentTwo.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nonamelittlefox/myAssginmentTwo/issues"
+    },
+    "homepage": "https://github.com/nonamelittlefox/myAssginmentTwo#readme"
 }

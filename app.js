@@ -19,7 +19,6 @@ const productInsertRouter = require('./routes/insert');
 const productUpdateRouter = require('./routes/update');
 const loginRouter = require('./routes/login');
 
-
 const app = express();
 const PORT = 8888;
 
@@ -161,7 +160,7 @@ app.use(function(req, res, next) {
     next(createError(404));
 });
 
-app.listen(process.env.PORT || 3000, () => console.log(`<< Server running at:http://localhost:${PORT} >>`));
+app.listen(process.env.PORT, () => console.log(`<< Server running at:http://localhost:${PORT} >>`));
 
 // error handler
 app.use(function(err, req, res, next) {
