@@ -113,9 +113,6 @@ app.post('/doUpdateProduct', async(req, res) => {
     var ObjectID = require('mongodb').ObjectID;
     let client = await MongoClient.connect(url);
     let dbo = client.db("ProductDB");
-    //let product = await dbo.collection("Products").find({ _id: ObjectID(id.toString()) }).toArray();
-    // console.log(product);
-    // let result = await dbo.collection('Products').updateOne({ "_id": ObjectID(inputID.toString()) }, { $set: { Name: inputName.toString(), Price: inputPrice.toString() } });
     let result = await dbo.collection('Products').updateOne({ "_id": ObjectID(id) }, {
         $set: {
             name: iName,
