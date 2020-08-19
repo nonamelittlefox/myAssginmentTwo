@@ -1,0 +1,28 @@
+<hr>
+<body>
+    <div class="container">
+         <form action="/doInsertProduct" method="post">
+        <div class="form-group">
+            <h4 class="text-center">Insert a new product</h4>
+            <hr>
+            Name <input class="form-control" type="text" name="txtName" id="" required>
+            <br>
+            Price <input class="form-control" type="text" name="txtPrice" id="" required> 
+            <br>
+            Description <input class="form-control" type="text" name="txtDescription" id="" required>
+            <br>
+            Image  <input class="form-control" type="text" name="image" id="">
+            <br>
+            Genre: <select class="form-control" name="txtGenre" required>
+                        <option>Jacket</option>
+                        <option>Sneaker</option>
+                        <option>Bracket</option>
+                    </select>
+            <br>
+            Color <input class="form-control" type="text" name="txtColor" id="" required>
+            <br>
+            <button type="submit" class="btn btn-primary mb-2">Insert</button>
+        </div>
+    </form>
+    </div>
+</body>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--tips: to change the nav placement use .fixed-top,.fixed-bottom,.sticky-top-->
+    <a class="navbar-brand" href="/">aLazyFox</a>
+    <!--<a class="navbar-brand" href="#">
+        <img src="..." class="d-inline-block align-top" width="30" height="30" alt="...">My Brand
+    </a>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="user">Users <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="login">Login <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Product
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="productDetail">Sneakers</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Coming soon...</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Coming soon...</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/doSearch" method="GET">
+            <input class="form-control mr-sm-2" type="text" name="name" placeholder="Search" aria-label="Search" required> 
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        {{!-- --- --}}
+        {{!-- <form class="ml-auto d-flex" action="/doSearch" method="GET">
+            <input class="form-control" type="text" name="name" />
+        <button class="btn btn-primary ml-2">Search</button> --}}
+    </form> 
+    </div>
+</nav>

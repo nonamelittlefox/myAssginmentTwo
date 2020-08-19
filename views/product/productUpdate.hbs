@@ -1,0 +1,41 @@
+<hr>
+<div class="container">
+    <form action="/doUpdateProduct" method="post">
+        <div class="form-group">
+            {{#each model}}
+            <label for="name">ID</label>
+            <input type="hidden" name="txtID" id="" class="form-control" value={{_id}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="txtName" id="" class="form-control" value={{name}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" name="txtDescription" id="" class="form-control" value={{description}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="genre">Genre</label>
+                <select class="form-control" name="txtGenre" value={{genre}} required>
+                    <option>Jacket</option>
+                    <option>Sneaker</option>
+                    <option>Bracket</option>
+                </select>
+        </div>
+        <div class="form-group">
+            <label for="color">Color</label>
+            <input type="text" name="txtColor" id="" class="form-control" value={{color}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="text" name="image" id="" class="form-control" value={{image}}>
+            <br>
+        </div>
+        <input type="submit" value="Update" class="btn btn-primary">
+        {{/each}}
+    </form>
+</div>

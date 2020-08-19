@@ -1,0 +1,68 @@
+<style>
+    body {
+        background: url('https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+    body a {
+        color: black;
+    }
+
+    body a:hover{   
+        color: white;
+        text-decoration: none;
+    }
+
+    .btn {
+        padding: 20px;
+    }
+
+    tr td {
+        font-weight: 300;
+        font-size: 25px;
+        color: white;
+    }
+
+    tr td img {
+        width: 150px;
+        height: 150px;
+    }
+</style>
+<hr>
+<body>
+    <div class="container-fluid">
+        <div class="col-12-bg">
+            <div class="btn btn-warning"><a href="/productInsert">Add New Product</a></div>
+            <br><hr>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Color</th>  
+                        <th scope="col">Delete</th>
+                        <th scope="col">Update</th>
+                    </tr>  
+                </thead>        
+                <tbody>  
+                    {{#each model}}
+                    <tr>
+                        <td> {{_id}} </td>
+                        <td>{{name}}</td>
+                        <td>{{description}}</td>
+                        {{!-- <td>{{image}}</td> --}}
+                        <td><img  src="{{image}}" alt=""></td>
+                        <td>{{genre}}</td>
+                        <td>{{color}}</td>
+                        <td><button type="button" class="btn btn-primary"><a href="/delete?id={{_id}}">Delete</a></button></td>
+                        <td><button type="button" class="btn btn-danger"><a href="/update?id={{_id}}">Update</a></button></td>
+                    </tr>
+                    {{/each}}  
+                </tbody>          
+            </table>    
+        </div>
+    </div> 
+</body>
